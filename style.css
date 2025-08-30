@@ -6,6 +6,18 @@ body {
   color: white;
 }
 
+/* Fade-in animations */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px); /* start lower */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* Header */
 header {
   text-align: center;
@@ -16,11 +28,16 @@ header h1 {
   margin: 0;
   font-size: 2.5em;
   font-weight: bold;
+  opacity: 0;
+  animation: fadeUp 2s ease-out forwards;
 }
 
 header p {
   font-size: 1.2em;
   font-style: italic;
+  opacity: 0;
+  animation: fadeUp 2s ease-out forwards;
+  animation-delay: 2s;  /* show subtitle after name */
 }
 
 /* Sections */
