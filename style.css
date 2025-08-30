@@ -6,11 +6,11 @@ body {
   color: white;
 }
 
-/* Fade-in animations */
+/* Faster fade-in animation */
 @keyframes fadeUp {
   from {
     opacity: 0;
-    transform: translateY(30px); /* start lower */
+    transform: translateY(30px);
   }
   to {
     opacity: 1;
@@ -20,41 +20,53 @@ body {
 
 /* Header */
 header {
-  text-align: center;
-  padding: 60px 20px;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* push to left */
 }
 
 header h1 {
   margin: 0;
-  font-size: 2.5em;
+  font-size: 3em;
   font-weight: bold;
   opacity: 0;
-  animation: fadeUp 2s ease-out forwards;
+  animation: fadeUp 0.5s ease-out forwards; /* faster */
 }
 
 header p {
-  font-size: 1.2em;
+  font-size: 1.8em;
   font-style: italic;
   opacity: 0;
-  animation: fadeUp 2s ease-out forwards;
-  animation-delay: 2s;
+  animation: fadeUp 0.5s ease-out forwards;
+  animation-delay: 0.5s;
 }
 
 /* Section blocks */
 .block {
-  min-height: 25vh; /* ~1/4 of screen */
-  padding: 40px 20px;
-  text-align: center;
+  min-height: 40vh; /* longer sections */
+  padding: 60px 40px;
 }
 
 .block-gray {
-  background: #e6e6e6; /* light gray */
-  color: #333;         /* dark text for contrast */
+  background: #e6e6e6;
+  color: #333;
+  text-align: center; /* About Me remains centered */
 }
 
 .block-blue {
-  background: #b3e0e0; /* light teal/blue */
+  background: #b3e0e0;
   color: #222;
+  text-align: left; /* Projects slightly left */
+  padding-left: 60px;
+}
+
+/* Contact section pushed to top right */
+#contact {
+  text-align: right;
+  padding-right: 60px;
+  padding-top: 20px;
+  min-height: 40vh;
 }
 
 /* Images */
