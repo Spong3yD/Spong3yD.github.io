@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
 </head>
 <body>
-  <h1>Hi, I’m [Your Name] 👋</h1>
+  <h1>Jiho Im</h1>
   <p>Welcome to my portfolio website!</p>
   
   <h2>About Me</h2>
@@ -22,6 +22,6 @@
   </ul>
   
   <h2>Contact</h2>
-  <p>Email: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
+  <p>Email: <a href="mailto:jihoim1@gmail.com">youremail@example.com</a></p>
 </body>
 </html>
