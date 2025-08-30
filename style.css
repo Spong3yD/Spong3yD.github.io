@@ -21,7 +21,7 @@ body {
 /* Header */
 header {
   text-align: center;
-  padding: 50px 20px;
+  padding: 60px 20px;
 }
 
 header h1 {
@@ -37,15 +37,24 @@ header p {
   font-style: italic;
   opacity: 0;
   animation: fadeUp 2s ease-out forwards;
-  animation-delay: 2s;  /* show subtitle after name */
+  animation-delay: 2s;
 }
 
-/* Sections */
-section {
-  margin: 20px auto;
-  padding: 20px;
-  max-width: 700px;
+/* Section blocks */
+.block {
+  min-height: 25vh; /* ~1/4 of screen */
+  padding: 40px 20px;
   text-align: center;
+}
+
+.block-gray {
+  background: #e6e6e6; /* light gray */
+  color: #333;         /* dark text for contrast */
+}
+
+.block-blue {
+  background: #b3e0e0; /* light teal/blue */
+  color: #222;
 }
 
 /* Images */
@@ -58,7 +67,7 @@ img {
 
 /* Links */
 a {
-  color: white;
+  color: inherit;
   text-decoration: underline;
 }
 
