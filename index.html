@@ -5,105 +5,92 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Jiho Im | Data Analyst</title>
 
-  <!-- Font -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-  <!-- CSS -->
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
   <!-- HERO -->
-  <header class="hero">
+  <section class="hero">
     <div class="hero-inner">
       <h1>Jiho Im</h1>
       <p class="hero-subtitle">
-        Data Analyst · Business Administration (Data Analytics)
+        Data Analysis & Business Administration Graduate<br>
+        Concentration in Data Analytics
       </p>
 
       <div class="hero-actions">
         <a href="#projects" class="btn primary">View Projects</a>
-        <a href="#skills" class="btn">Skills</a>
+        <a href="https://github.com/YOUR_GITHUB_USERNAME" class="btn">GitHub</a>
       </div>
     </div>
-  </header>
+  </section>
 
-  <!-- MAIN -->
-  <main class="container">
+  <!-- ABOUT -->
+  <section class="container">
+    <h2>About Me</h2>
 
-    <!-- ABOUT -->
-    <section class="grid two about">
-
-      <div class="about-text">
-        <h2>About Me</h2>
+    <div class="grid two">
+      <div class="card highlight">
+        <h3>Background</h3>
         <p>
-          I am a Business Administration graduate with a concentration in Data Analytics
-          and a Google Data Analytics Certificate holder. I focus on transforming data
-          into actionable insights using Excel and SQL.
+          I’m a Business Administration graduate with a concentration in
+          Data Analytics. I enjoy turning messy datasets into clear,
+          actionable insights that support business decision-making.
+        </p>
+
+        <p>
+          I also hold the <strong>Google Data Analytics Certificate</strong>
+          and have hands-on experience with Excel, SQL, and dashboards.
         </p>
       </div>
 
-      <div class="about-side">
-        <img src="profile.jpg" alt="Jiho Im" class="profile-img">
-
-        <div class="card highlight">
-          <h3>Certification</h3>
-          <p><strong>Google Data Analytics Professional Certificate</strong></p>
-          <p class="muted">Coursera · Google</p>
-        </div>
-      </div>
-
-    </section>
-
-    <!-- PROJECTS -->
-    <section id="projects">
-      <h2>Projects</h2>
-
-      <div class="grid three">
-        <div class="card">
-          <h3>Customer Retention & Cohort Analysis</h3>
-          <p>
-            End-to-end analysis using Excel for data preparation and SQL
-            to calculate cohort-based retention metrics.
-          </p>
-
-          <div class="tags">
-            <span class="tag">Excel</span>
-            <span class="tag">SQL</span>
-            <span class="tag">Cohort Analysis</span>
-          </div>
-
-          <div class="links">
-            <a href="#">View Excel</a>
-            <a href="#">View SQL</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SKILLS -->
-    <section id="skills">
-      <h2>Skills</h2>
       <div class="card">
+        <h3>Profile</h3>
+        <img
+          src="profile.jpg"
+          alt="Jiho Im"
+          style="
+            width: 100%;
+            max-width: 260px;
+            border-radius: 16px;
+            margin-top: 12px;
+          "
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="container">
+    <h2>Featured Project</h2>
+
+    <div class="grid three">
+      <div class="card">
+        <h3>Customer Retention Analysis</h3>
+        <p>
+          An end-to-end analysis using Excel and SQL to examine cohort
+          retention, churn trends, and customer lifetime behavior.
+        </p>
+
         <div class="tags">
-          <span class="tag">SQL</span>
           <span class="tag">Excel</span>
-          <span class="tag">Google Sheets</span>
-          <span class="tag">Data Cleaning</span>
-          <span class="tag">Data Visualization</span>
-          <span class="tag">Business Analysis</span>
+          <span class="tag">SQL</span>
+          <span class="tag">Cohort Analysis</span>
+        </div>
+
+        <div class="links">
+          <a href="#">View SQL</a>
+          <a href="#">View Excel</a>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- FOOTER -->
-    <footer>
-      © 2026 Jiho Im · Hosted on GitHub Pages
-    </footer>
-
-  </main>
+  <footer>
+    © 2026 Jiho Im · Data Analytics Portfolio
+  </footer>
 
 </body>
 </html>
