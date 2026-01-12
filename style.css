@@ -2,8 +2,8 @@
   --bg-gradient-start: #a8edea; /* pastel blue */
   --bg-gradient-end: #fed6e3;   /* pastel pink */
   --card-bg: #ffffff;
-  --text: #ffffff;
-  --muted: rgba(255,255,255,0.8);
+  --text: #0f172a; /* black text */
+  --muted: rgba(0,0,0,0.7);
   --accent: #b084fc; /* pastel purple for accents */
   --accent-2: #7f7fff;
 }
@@ -21,12 +21,12 @@ body {
 
 /* HERO */
 .hero {
-  min-height: 50vh;
+  min-height: 25vh; /* quarter height */
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 20px;
+  padding: 15px;
 }
 
 .hero-inner {
@@ -35,24 +35,25 @@ body {
 
 .contact-email {
   font-size: 1.1rem;
-  margin-bottom: 12px;
+  margin-bottom: 8px;
   font-weight: 500;
+  color: var(--text);
 }
 
 .contact-email a {
-  color: white;
+  color: var(--text);
   text-decoration: underline;
 }
 
 .hero h1 {
-  font-size: 3rem;
-  margin-bottom: 8px;
+  font-size: 2.5rem;
+  margin-bottom: 6px;
 }
 
 .hero-subtitle {
-  font-size: 1.1rem;
-  color: rgba(255,255,255,0.9);
-  margin-bottom: 24px;
+  font-size: 1rem;
+  color: var(--text);
+  margin-bottom: 16px;
 }
 
 /* BUTTONS */
@@ -65,7 +66,7 @@ body {
 .btn {
   padding: 10px 22px;
   border-radius: 999px;
-  border: 1px solid rgba(255,255,255,0.25);
+  border: none;
   color: white;
   text-decoration: none;
   font-weight: 500;
@@ -74,7 +75,6 @@ body {
 
 .btn.primary {
   background: linear-gradient(135deg, var(--accent), var(--accent-2));
-  border: none;
 }
 
 .btn:hover {
@@ -86,19 +86,19 @@ body {
 .container {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 40px 20px; /* compact spacing */
+  padding: 30px 20px;
 }
 
 /* HEADINGS */
 h2 {
   font-size: 1.8rem;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 }
 
 /* GRID */
 .grid {
   display: grid;
-  gap: 20px; /* tighter spacing */
+  gap: 18px;
 }
 
 .grid.two {
@@ -113,10 +113,10 @@ h2 {
 .card {
   background: var(--card-bg);
   border-radius: 16px;
-  padding: 20px; /* reduced padding */
+  padding: 18px;
   box-shadow: 0 12px 30px rgba(0,0,0,0.08);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  color: #0f172a; /* dark text inside cards */
+  color: var(--text);
 }
 
 .card:hover {
@@ -130,8 +130,8 @@ h2 {
 
 /* PROFILE IMAGE */
 .profile-img {
-  width: 160px;
-  height: 160px;
+  width: 140px;
+  height: 140px;
   object-fit: cover;
   border-radius: 16px;
   margin-top: 12px;
@@ -168,21 +168,27 @@ h2 {
 /* FOOTER */
 footer {
   text-align: center;
-  color: rgba(255,255,255,0.85);
+  color: rgba(0,0,0,0.75);
   font-size: 0.9rem;
-  margin-top: 50px;
+  margin-top: 40px;
 }
 
-/* ANIMATIONS */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
+/* SQL CODE STYLING */
+.sql-code {
+  background: #f5f5f5;
+  color: #0f172a;
+  padding: 12px;
+  border-radius: 8px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.85rem;
+  overflow-x: auto;
+  max-height: 400px;
 }
 
 /* MOBILE */
 @media (max-width: 640px) {
-  .hero h1 { font-size: 2.4rem; }
-  .hero-subtitle { font-size: 1rem; }
+  .hero h1 { font-size: 2rem; }
+  .hero-subtitle { font-size: 0.95rem; }
   .hero-actions { flex-direction: column; gap: 8px; }
-  .grid { gap: 16px; }
+  .grid { gap: 14px; }
 }
