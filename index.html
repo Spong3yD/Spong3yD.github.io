@@ -1,36 +1,89 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>My Portfolio</title>
-  <meta charset="UTF-8">
-  <link rel="stylesheet" href="style.css">
-  <!-- Google Fonts: Jost -->
-  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;600;700&display=swap" rel="stylesheet">
+
+
+footer {
+color: var(--muted);
+font-size: 0.9rem;
+margin-top: 64px;
+}
+
+
+@media (max-width: 640px) {
+h1 { font-size: 2.2rem; }
+}
+</style>
 </head>
 <body>
-  <header>
-    <div class="header-top">
-      <h1>Jiho Im</h1>
-      <p>Data Analyst | Business Administration Graduate</p>
-      <div id="contact-top">
-        <p><a href="mailto:jane@example.com">jihoim1@gmail.com</a></p>
-      </div>
-    </div>
-  </header>
+<div class="container">
+<header>
+<h1>Jiho Im</h1>
+<div class="subtitle">
+Data Analyst · Business Administration (Data Analytics Concentration)
+</div>
+</header>
 
-  <section id="about" class="block block-gray">
-    <h2>About Me</h2>
-    <p>I specialize in turning data into insights. Skilled in Excel, SQL, and Tableau.</p>
-    <img src="mypicture.jpg" alt="Jane Doe" width="250">
-  </section>
 
-  <section id="projects" class="block block-blue">
-    <h2>Projects</h2>
-    <ul>
-      <li>📊 Sales Dashboard in Excel</li>
-      <li>📈 SQL Queries for Customer Analysis</li>
-      <li>📑 Tableau Visualization on Market Trends</li>
-    </ul>
-  </section>
+<section>
+<h2>About Me</h2>
+<p>
+I am a Business Administration graduate with a concentration in Data Analytics and a Google Data Analytics Certificate holder.
+I focus on turning raw data into clear, actionable insights using Excel, SQL, and data visualization tools.
+</p>
+</section>
+
+
+<section>
+<h2>Certifications</h2>
+<div class="card">
+<strong>Google Data Analytics Professional Certificate</strong>
+<p class="subtitle">Coursera · Google</p>
+</div>
+</section>
+
+
+<section>
+<h2>Projects</h2>
+
+
+<div class="card">
+<h3>Customer Retention & Cohort Analysis</h3>
+<p>
+An end-to-end analysis using Excel for initial cleaning and cohort creation,
+followed by SQL queries to calculate retention metrics and user behavior trends.
+</p>
+<div class="tags">
+<span class="tag">Excel</span>
+<span class="tag">SQL</span>
+<span class="tag">Cohort Analysis</span>
+<span class="tag">Data Cleaning</span>
+</div>
+<p style="margin-top: 16px;">
+<a href="#">View Excel File</a> · <a href="#">View SQL Queries</a>
+</p>
+</div>
+
+
+</section>
+
+
+<section>
+<h2>Skills</h2>
+<div class="card">
+<div class="tags">
+<span class="tag">SQL</span>
+<span class="tag">Excel</span>
+<span class="tag">Google Sheets</span>
+<span class="tag">Data Cleaning</span>
+<span class="tag">Data Visualization</span>
+<span class="tag">Business Analysis</span>
+</div>
+</div>
+</section>
+
+
+<footer>
+© 2026 Jiho Im · Hosted on GitHub Pages
+</footer>
+</div>
 </body>
 </html>
