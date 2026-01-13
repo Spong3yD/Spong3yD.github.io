@@ -12,27 +12,33 @@
   <header class="hero">
     <div class="contact">
       <span class="contact-title">Contact Me</span>
-      <span class="contact-email">jihoim1@gmail.com</span>
+      <a href="mailto:jihoim1@gmail.com" class="contact-email">
+        jihoim1@gmail.com
+      </a>
     </div>
 
     <div class="hero-content">
       <h1 class="float">Jiho Im</h1>
       <p class="subtitle fade-in">Data Analyst</p>
-      <a href="#projects" class="cta fade-in-delay">View Projects</a>
+      <a href="#projects" class="cta shiny fade-in-delay">View Projects</a>
     </div>
   </header>
 
   <!-- ABOUT ME -->
-  <section class="about">
-    <img src="profile.jpg" alt="Profile photo" class="profile-pic" />
-    <div class="about-text">
+  <section class="about-wrapper">
+    <div class="about-photo">
+      <img src="profile.jpg" alt="Profile photo" />
+    </div>
+
+    <div class="about-card">
       <h2>About Me</h2>
       <p>
-        I am a data analyst with a strong interest in customer behavior, retention,
-        and revenue trends. I enjoy transforming raw datasets into clear insights
-        that support business decision-making. My experience includes SQL-based
-        cohort analysis and Excel-driven exploratory analysis, with a focus on
-        identifying growth opportunities and early churn patterns.
+        I am a data analyst focused on understanding customer behavior,
+        retention, and revenue trends. I enjoy transforming raw datasets
+        into actionable insights that support business decision-making.
+        My experience includes SQL-based cohort analysis and Excel-driven
+        exploratory analysis, with an emphasis on identifying early churn
+        and growth opportunities.
       </p>
     </div>
   </section>
@@ -47,7 +53,7 @@
 
       <img
         src="스크린샷 2026-01-12 134024.png"
-        alt="Customer Retention Heatmap"
+        alt="Customer Retention Chart"
         class="project-chart"
       />
 
@@ -137,3 +143,4 @@ ORDER BY cohort_month, months_since_first_purchase;
 
 </body>
 </html>
+
