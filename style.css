@@ -4,8 +4,7 @@
   --bg2: #7fa0d6;
 
   /* BUBBLES */
-  --card: #2a537f;
-
+  --card: rgba(47, 92, 140, 0.92);
   /* TEXT */
   --text: #ffffff;
   --muted: rgba(255, 255, 255, 0.75);
