@@ -1,11 +1,18 @@
 :root {
-  --bg1: #e2d9ff;
-  --bg2: #d6e0ff;
+  /* BACKGROUND (2 shades lighter) */
+  --bg1: #6f8fc9;
+  --bg2: #7fa0d6;
+
+  /* BUBBLES */
+  --card: #1e3f66;
+
+  /* TEXT */
+  --text: #ffffff;
+  --muted: rgba(255, 255, 255, 0.75);
+
+  /* ACCENT (UNCHANGED) */
   --accent: #7a5cff;
   --accent-light: #b8a9ff;
-  --text: #0f172a;
-  --muted: rgba(15, 23, 42, 0.65);
-  --card: #ffffff;
 }
 
 * {
@@ -84,11 +91,12 @@ body {
 }
 
 .contact-email {
-  font-size: 1.5rem; /* slightly bigger than Contact Me */
+  font-size: 1.5rem;
   font-weight: 500;
   color: var(--text);
   text-decoration: none;
 }
+
 .contact-email:hover {
   text-decoration: underline;
 }
@@ -106,7 +114,7 @@ body {
   background: var(--card);
   border-radius: 22px;
   padding: 16px;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
 }
 
 .about-photo img {
@@ -120,7 +128,7 @@ body {
   background: var(--card);
   border-radius: 22px;
   padding: 28px 34px;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
 }
 
 .about-card h2 {
@@ -139,7 +147,7 @@ body {
   background: var(--card);
   padding: 26px;
   border-radius: 22px;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
 }
 
 /* HOVER */
@@ -149,7 +157,7 @@ body {
 
 .hover-rise:hover {
   transform: translateY(-8px);
-  box-shadow: 0 20px 45px rgba(0,0,0,0.12);
+  box-shadow: 0 20px 45px rgba(0,0,0,0.25);
 }
 
 /* CHART */
@@ -183,7 +191,8 @@ body {
 /* CODE */
 pre {
   margin-top: 14px;
-  background: #f6f6ff;
+  background: #162f4d;
+  color: #ffffff;
   padding: 14px;
   border-radius: 12px;
   font-size: 0.75rem;
@@ -196,7 +205,7 @@ pre {
   margin-top: 14px;
   text-decoration: none;
   font-size: 0.85rem;
-  color: var(--accent);
+  color: var(--accent-light);
 }
 
 /* FOOTER */
@@ -204,7 +213,7 @@ pre {
   text-align: center;
   padding: 20px;
   font-size: 0.75rem;
-  color: var(--muted);
+  color: var(--text);
 }
 
 /* ANIMATIONS */
@@ -230,3 +239,4 @@ pre {
   50% { transform: translateY(-6px); }
   100% { transform: translateY(0); }
 }
+
