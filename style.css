@@ -2,12 +2,11 @@
   --bg1: #e2d9ff;
   --bg2: #d6e0ff;
   --accent: #7a5cff;
+  --accent-light: #b8a9ff;
   --text: #0f172a;
   --muted: rgba(15, 23, 42, 0.65);
   --card: #ffffff;
 }
-
-
 
 * {
   box-sizing: border-box;
@@ -23,7 +22,7 @@ body {
 
 /* HERO */
 .hero {
-  min-height: 30vh;
+  min-height: 22vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -36,19 +35,38 @@ body {
 }
 
 .subtitle {
-  margin-top: 8px;
+  margin-top: 6px;
   font-size: 1rem;
 }
 
 .cta {
   display: inline-block;
-  margin-top: 16px;
-  padding: 10px 20px;
-  background: var(--accent);
+  margin-top: 14px;
+  padding: 10px 26px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-light));
   color: white;
-  border-radius: 20px;
+  border-radius: 999px;
   text-decoration: none;
   font-size: 0.85rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta.shiny::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -30%;
+  width: 40%;
+  height: 200%;
+  background: rgba(255,255,255,0.35);
+  transform: rotate(25deg);
+  animation: shine 3s infinite;
+}
+
+@keyframes shine {
+  0% { left: -40%; }
+  100% { left: 120%; }
 }
 
 /* CONTACT */
@@ -61,31 +79,52 @@ body {
 
 .contact-title {
   display: block;
-  font-size: 0.7rem;
-  letter-spacing: 0.08em;
+  font-size: 1.4rem;
+  font-weight: 600;
 }
 
 .contact-email {
-  font-size: 0.95rem;
+  font-size: 1.9rem;
   font-weight: 500;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.contact-email:hover {
+  text-decoration: underline;
 }
 
 /* ABOUT */
-.about {
-  display: flex;
+.about-wrapper {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 28px;
+  padding: 40px 80px;
   align-items: center;
-  gap: 40px;
-  padding: 60px 80px;
 }
 
-.profile-pic {
-  width: 180px;
-  height: 180px;
-  border-radius: 50%;
+.about-photo {
+  background: var(--card);
+  border-radius: 22px;
+  padding: 16px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+}
+
+.about-photo img {
+  width: 200px;
+  height: 200px;
+  border-radius: 16px;
   object-fit: cover;
 }
 
-.about-text h2 {
+.about-card {
+  background: var(--card);
+  border-radius: 22px;
+  padding: 28px 34px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+}
+
+.about-card h2 {
   margin-bottom: 12px;
 }
 
@@ -100,7 +139,7 @@ body {
 .card {
   background: var(--card);
   padding: 26px;
-  border-radius: 18px;
+  border-radius: 22px;
   box-shadow: 0 12px 30px rgba(0,0,0,0.08);
 }
 
@@ -142,9 +181,10 @@ body {
   line-height: 1.4;
 }
 
+/* CODE */
 pre {
   margin-top: 14px;
-  background: #f7f7ff;
+  background: #f6f6ff;
   padding: 14px;
   border-radius: 12px;
   font-size: 0.75rem;
