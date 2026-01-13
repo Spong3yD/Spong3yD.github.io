@@ -10,13 +10,15 @@
 
   <!-- HERO -->
   <header class="hero">
-    <div class="hero-content">
-      <h1>Jiho Im</h1>
-      <p class="subtitle">Data Analyst</p>
-      <a href="#projects" class="cta">View Projects</a>
-    </div>
     <div class="contact">
-      📧 jihoim1@gmail.com
+      <span class="contact-title">Contact Me</span>
+      <span class="contact-email">jihoim1@gmail.com</span>
+    </div>
+
+    <div class="hero-content">
+      <h1 class="float">Jiho Im</h1>
+      <p class="subtitle fade-in">Data Analyst</p>
+      <a href="#projects" class="cta fade-in-delay">View Projects</a>
     </div>
   </header>
 
@@ -38,7 +40,7 @@
   <!-- PROJECTS -->
   <section id="projects" class="projects">
 
-    <!-- EXCEL PROJECT -->
+    <!-- EXCEL -->
     <div class="card hover-rise">
       <h3>Excel Analysis</h3>
       <p>Customer growth and retention trends analyzed using Excel.</p>
@@ -54,8 +56,8 @@
         <ul>
           <li><strong>Customer acquisition increased through 2023</strong>, then slowed in 2024.</li>
           <li><strong>Revenue closely follows new customer growth</strong>, suggesting limited repeat spend impact.</li>
-          <li><strong>Only ~25% of customers return after the first month</strong>, showing early churn is the primary drop-off.</li>
-          <li><strong>Improving early retention would likely drive more revenue</strong> than increasing acquisition.</li>
+          <li><strong>Only ~25% of customers return after the first month</strong>, indicating early churn.</li>
+          <li><strong>Improving early retention would likely drive more revenue</strong> than acquisition alone.</li>
         </ul>
       </div>
 
@@ -68,19 +70,10 @@
       </a>
     </div>
 
-    <!-- SQL PROJECT -->
+    <!-- SQL -->
     <div class="card hover-rise">
       <h3>SQL Cohort Retention Analysis</h3>
-      <p>Customer retention analysis using BigQuery SQL.</p>
-
-      <div class="insights">
-        <h4>Key Insights</h4>
-        <ul>
-          <li><strong>Most customer churn occurs within the first 1–2 months</strong> after the initial purchase.</li>
-          <li><strong>Earlier cohorts retain customers more effectively</strong>, suggesting shifts in customer quality.</li>
-          <li><strong>Retention stabilizes after month three</strong>, indicating a smaller but loyal customer base.</li>
-        </ul>
-      </div>
+      <p>Customer cohort and retention analysis using BigQuery SQL.</p>
 
       <pre><code>
 WITH first_orders AS (
@@ -117,6 +110,15 @@ FROM cohort_table
 GROUP BY cohort_month, months_since_first_purchase
 ORDER BY cohort_month, months_since_first_purchase;
       </code></pre>
+
+      <div class="insights">
+        <h4>Key Insights</h4>
+        <ul>
+          <li><strong>Most churn occurs within the first 1–2 months</strong> after initial purchase.</li>
+          <li><strong>Earlier cohorts retain customers more effectively</strong>, suggesting higher customer quality.</li>
+          <li><strong>Retention stabilizes after month three</strong>, indicating a loyal core customer base.</li>
+        </ul>
+      </div>
 
       <a
         href="https://console.cloud.google.com/bigquery"
