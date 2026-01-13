@@ -23,8 +23,13 @@
 body {
   font-family: "Inter", system-ui, sans-serif;
   color: var(--text);
-  background: linear-gradient(135deg, var(--bg1), var(--bg2));
-}
+  background: linear-gradient(
+  135deg,
+  var(--bg2) 0%,
+  var(--bg1) 45%,
+  #4f6fa3 100%
+);
+
 
 /* HERO */
 .hero {
