@@ -84,20 +84,27 @@ body {
   text-align: right;
 
   background: transparent;
-  border: 2px solid rgba(255, 255, 255, 0.35); /* subtle outline */
+  border: 2px solid rgba(255, 255, 255, 0.35);
   border-radius: 16px;
   padding: 12px 20px;
-  backdrop-filter: blur(4px); /* optional soft glass effect */
+  backdrop-filter: blur(4px);
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact:hover {
+  transform: translateY(-4px); /* subtle lift */
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18); /* soft shadow glow */
 }
 
 .contact-title {
   display: block;
-  font-size: 1.15rem; /* slightly smaller than before */
+  font-size: 1.15rem;
   font-weight: 600;
 }
 
 .contact-email {
-  font-size: 1.25rem; /* slightly smaller */
+  font-size: 1.25rem;
   font-weight: 500;
   color: var(--text);
   text-decoration: none;
@@ -106,7 +113,6 @@ body {
 .contact-email:hover {
   text-decoration: underline;
 }
-
 /* ABOUT */
 .about-wrapper {
   display: grid;
