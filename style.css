@@ -1,8 +1,8 @@
 :root {
-  --bg1: #f3e7ff;
-  --bg2: #e7f0ff;
-  --accent: #9b7bff;
-  --accent-soft: #cdbdff;
+  --bg1: #e6dcff;   /* slightly darker pastel purple */
+  --bg2: #dfe8ff;   /* slightly darker pastel blue */
+  --accent: #8b6cff;
+  --accent-soft: #b7a6ff;
   --text: #0f172a;
   --muted: rgba(15, 23, 42, 0.65);
   --card: #ffffff;
