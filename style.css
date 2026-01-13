@@ -1,12 +1,11 @@
 :root {
-  --bg1: #e6dcff;
-  --bg2: #dfe8ff;
-  --accent: #8b6cff;
+  --bg1: #e2d9ff;
+  --bg2: #d6e0ff;
+  --accent: #7a5cff;
   --text: #0f172a;
   --muted: rgba(15, 23, 42, 0.65);
   --card: #ffffff;
 }
-
 
 * {
   box-sizing: border-box;
@@ -22,27 +21,27 @@ body {
 
 /* HERO */
 .hero {
-  min-height: 25vh;
+  min-height: 30vh;
   display: flex;
-  flex-direction: column;
+  align-items: center;
   justify-content: center;
-  padding: 40px 80px;
   position: relative;
+  text-align: center;
 }
 
 .hero-content h1 {
-  font-size: 2.4rem;
+  font-size: 2.6rem;
 }
 
 .subtitle {
-  margin-top: 6px;
+  margin-top: 8px;
   font-size: 1rem;
 }
 
 .cta {
   display: inline-block;
-  margin-top: 14px;
-  padding: 10px 18px;
+  margin-top: 16px;
+  padding: 10px 20px;
   background: var(--accent);
   color: white;
   border-radius: 20px;
@@ -50,69 +49,83 @@ body {
   font-size: 0.85rem;
 }
 
+/* CONTACT */
 .contact {
   position: absolute;
   top: 20px;
   right: 40px;
-  font-size: 0.85rem;
+  text-align: right;
+}
+
+.contact-title {
+  display: block;
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+}
+
+.contact-email {
+  font-size: 0.95rem;
+  font-weight: 500;
 }
 
 /* ABOUT */
 .about {
   display: flex;
   align-items: center;
-  gap: 30px;
-  padding: 50px 80px;
+  gap: 40px;
+  padding: 60px 80px;
 }
 
 .profile-pic {
-  width: 140px;
-  height: 140px;
+  width: 180px;
+  height: 180px;
   border-radius: 50%;
   object-fit: cover;
 }
 
 .about-text h2 {
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
 /* PROJECTS */
 .projects {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 30px;
+  gap: 32px;
   padding: 40px 80px;
 }
 
 .card {
   background: var(--card);
-  padding: 24px;
+  padding: 26px;
   border-radius: 18px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
 }
 
+/* HOVER */
 .hover-rise {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
 .hover-rise:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 16px 40px rgba(0,0,0,0.12);
+  transform: translateY(-8px);
+  box-shadow: 0 20px 45px rgba(0,0,0,0.12);
 }
 
+/* CHART */
 .project-chart {
   width: 100%;
-  margin-top: 14px;
+  margin-top: 16px;
   border-radius: 12px;
 }
 
 /* INSIGHTS */
 .insights {
-  margin-top: 14px;
+  margin-top: 16px;
 }
 
 .insights h4 {
-  margin-bottom: 6px;
+  margin-bottom: 8px;
   font-size: 0.95rem;
 }
 
@@ -128,12 +141,12 @@ body {
 }
 
 pre {
-  margin-top: 12px;
-  background: #f8f8ff;
-  padding: 12px;
+  margin-top: 14px;
+  background: #f7f7ff;
+  padding: 14px;
   border-radius: 12px;
-  overflow-x: auto;
   font-size: 0.75rem;
+  overflow-x: auto;
 }
 
 /* LINKS */
@@ -151,4 +164,28 @@ pre {
   padding: 20px;
   font-size: 0.75rem;
   color: var(--muted);
+}
+
+/* ANIMATIONS */
+.fade-in {
+  animation: fadeIn 1.2s ease forwards;
+}
+
+.fade-in-delay {
+  animation: fadeIn 1.6s ease forwards;
+}
+
+.float {
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+  100% { transform: translateY(0); }
 }
