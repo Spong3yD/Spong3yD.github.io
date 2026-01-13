@@ -6,102 +6,95 @@
   <title>Jiho Im | Data Analyst</title>
 
   <!-- Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
   <!-- HERO -->
   <section class="hero">
-    <div class="hero-inner">
-      <p class="contact-email">📧 <a href="mailto:your.email@example.com">your.email@example.com</a></p>
-      <h1>Jiho Im</h1>
-      <p class="hero-subtitle">
-        Data Analyst
+    <div class="hero-inner fade-in">
+      <p class="contact-email">
+        📧 <a href="mailto:jihoim1@gmail.com">jihoim1@gmail.com</a>
       </p>
-
-      <div class="hero-actions">
-        <a href="#projects" class="btn primary">View Projects</a>
-      </div>
+      <h1>Jiho Im</h1>
+      <p class="hero-subtitle">Data Analyst</p>
+      <a href="#projects" class="btn primary">View Projects</a>
     </div>
   </section>
 
-  <!-- ABOUT -->
-  <section class="container">
-    <h2>About Me</h2>
-    <div class="grid two">
-      <div class="card highlight">
-        <h3>Background</h3>
-        <p>
-          I’m a Business Administration graduate with a concentration in Data Analytics.  
-          I enjoy turning messy datasets into clear, actionable insights that support business decision-making.
-        </p>
-        <p>
-          I also hold the <strong>Google Data Analytics Certificate</strong> and have hands-on experience with Excel, SQL, and dashboards.
-        </p>
-      </div>
+  <!-- ABOUT (HORIZONTAL) -->
+  <section class="about fade-up">
+    <img src="스크린샷 2026-01-12 134024.png" alt="Jiho Im" class="about-img" />
 
-      <div class="card">
-        <h3>Profile</h3>
-        <img src="profile.jpg" alt="Jiho Im" class="profile-img" />
-      </div>
+    <div class="about-text">
+      <h2>About Me</h2>
+      <p>
+        I am a Business Administration graduate focused on data analytics, with hands-on
+        experience using Excel and SQL to analyze customer behavior and business trends.
+      </p>
+      <p>
+        I hold the Google Data Analytics Professional Certificate and enjoy transforming
+        raw data into insights that support real-world decision-making.
+      </p>
     </div>
   </section>
 
   <!-- PROJECTS -->
-  <section id="projects" class="container">
+  <section id="projects" class="container fade-up">
     <h2>Projects</h2>
 
     <div class="grid two">
-      <!-- Excel Project -->
-      <div class="card">
-        <h3>Excel Project</h3>
-        <p>Cleaned and visualized data using Excel for analysis.</p>
-        <div class="links">
-          <a href="https://docs.google.com/spreadsheets/d/1DjD-zhVgTcI55zPvw5RMFi9_wOZI-ocn5Dla3mfb6hY/edit?usp=sharing" target="_blank">View Excel Sheet</a>
-        </div>
+      <!-- Excel -->
+      <div class="card hover-rise">
+        <h3>Excel Analysis</h3>
+        <p>Monthly new customer trends analyzed using Excel.</p>
+
+        <img
+          src="스크린샷 2026-01-12 134024.png"
+          alt="Monthly New Customers Chart"
+          class="project-chart"
+        />
+
+        <p class="chart-caption">
+          Clear month-over-month trends highlighting customer acquisition growth.
+        </p>
+
+        <a
+          href="https://docs.google.com/spreadsheets/d/1DjD-zhVgTcI55zPvw5RMFi9_wOZI-ocn5Dla3mfb6hY/edit?usp=sharing"
+          target="_blank"
+          class="project-link"
+        >
+          View Full Excel Sheet →
+        </a>
       </div>
 
-      <!-- SQL Project -->
-      <div class="card">
-        <h3>SQL Project</h3>
-        <p>Cohort retention analysis using SQL in BigQuery:</p>
+      <!-- SQL -->
+      <div class="card hover-rise">
+        <h3>SQL Cohort Retention</h3>
+        <p>Cohort retention analysis written in BigQuery SQL.</p>
+
         <pre class="sql-code">
 WITH first_orders AS (
-  SELECT
-    customer_id,
-    DATE_TRUNC(MIN(order_date), MONTH) AS cohort_month
+  SELECT customer_id,
+         DATE_TRUNC(MIN(order_date), MONTH) AS cohort_month
   FROM portfolio_analysis.orders_native
   GROUP BY customer_id
 ),
-
 customer_month_activity AS (
-  SELECT
-    o.customer_id,
-    f.cohort_month,
-    DATE_TRUNC(o.order_date, MONTH) AS activity_month
+  SELECT o.customer_id,
+         f.cohort_month,
+         DATE_TRUNC(o.order_date, MONTH) AS activity_month
   FROM portfolio_analysis.orders_native o
   JOIN first_orders f
     ON o.customer_id = f.customer_id
-  GROUP BY
-    o.customer_id,
-    f.cohort_month,
-    activity_month
-),
-
-cohort_table AS (
-  SELECT
-    cohort_month,
-    DATE_DIFF(activity_month, cohort_month, MONTH) AS months_since_first_purchase,
-    customer_id
-  FROM customer_month_activity
 )
-
-SELECT
-  cohort_month,
-  months_since_first_purchase,
-  COUNT(customer_id) AS customers
-FROM cohort_table
+SELECT cohort_month,
+       DATE_DIFF(activity_month, cohort_month, MONTH) AS months_since_first_purchase,
+       COUNT(customer_id) AS customers
+FROM customer_month_activity
 GROUP BY cohort_month, months_since_first_purchase
 ORDER BY cohort_month, months_since_first_purchase;
         </pre>
