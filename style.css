@@ -162,7 +162,27 @@ footer {
   transform: translateY(-6px);
   box-shadow: 0 24px 50px rgba(155,123,255,0.25);
 }
+/* INSIGHTS */
+.insights {
+  margin-top: 14px;
+}
 
+.insights h4 {
+  margin-bottom: 6px;
+  font-size: 0.95rem;
+}
+
+.insights ul {
+  padding-left: 18px;
+  margin: 0;
+}
+
+.insights li {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-bottom: 6px;
+  line-height: 1.4;
+}
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
