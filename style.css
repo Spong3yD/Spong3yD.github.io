@@ -1,11 +1,11 @@
 :root {
-  --bg1: #e2d9ff;
-  --bg2: #d6e0ff;
-  --accent: #7a5cff;
+  --bg1: #0f2a44;     /* deep blue */
+  --bg2: #163a5f;     /* slightly lighter blue */
+  --accent: #7a5cff;  /* KEEP for View Projects (unchanged) */
   --accent-light: #b8a9ff;
   --text: #0f172a;
   --muted: rgba(15, 23, 42, 0.65);
-  --card: #ffffff;
+  --card: #eaf2ff;    /* light blue cards / bubbles */
 }
 * {
   box-sizing: border-box;
@@ -34,7 +34,13 @@ body {
 .hero-content h1 {
   font-size: 2.6rem;
 }
-
+/* HERO TEXT COLOR OVERRIDE */
+.hero-content h1,
+.hero-content .subtitle,
+.contact-title,
+.contact-email {
+  color: #ffffff;
+}
 .subtitle {
   margin-top: 6px;
   font-size: 1rem;
