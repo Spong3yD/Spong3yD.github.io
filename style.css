@@ -1,16 +1,16 @@
 :root {
-  /* BACKGROUND (2 shades lighter) */
-  --bg1: #6f8fc9;
-  --bg2: #7fa0d6;
+  /* BACKGROUND (softer gradient) */
+  --bg1: #718bbd;  /* softer, slightly muted blue */
+  --bg2: #8aa2d1;  /* smooth gradient transition */
 
-  /* BUBBLES */
-  --card: #1e3f66;
+  /* BUBBLES / CARDS (lighter, less contrast) */
+  --card: #2f4f7f; /* still dark, but blends better with background */
 
   /* TEXT */
   --text: #ffffff;
   --muted: rgba(255, 255, 255, 0.75);
 
-  /* ACCENT (UNCHANGED) */
+  /* ACCENT (unchanged) */
   --accent: #7a5cff;
   --accent-light: #b8a9ff;
 }
