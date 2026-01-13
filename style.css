@@ -78,12 +78,11 @@ body {
 
 /* CONTACT */
 .contact {
-  position: absolute;
-  top: 20px;
-  right: 40px;
-  text-align: right;
+  background: transparent;
+  border: 2px solid rgba(255,255,255,0.3);
+  border-radius: 16px;
+  padding: 14px 22px;
 }
-
 .contact-title {
   display: block;
   font-size: 1.3rem;
