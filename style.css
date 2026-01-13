@@ -4,7 +4,8 @@
   --bg2: #7fa0d6;
 
   /* BUBBLES */
-  --card: rgba(47, 92, 140, 0.92);
+  --card: #1e3f66;
+
   /* TEXT */
   --text: #ffffff;
   --muted: rgba(255, 255, 255, 0.75);
@@ -23,13 +24,8 @@
 body {
   font-family: "Inter", system-ui, sans-serif;
   color: var(--text);
-  background: linear-gradient(
-  135deg,
-  var(--bg2) 0%,
-  var(--bg1) 45%,
-  #4f6fa3 100%
-);
-
+  background: linear-gradient(135deg, var(--bg1), var(--bg2));
+}
 
 /* HERO */
 .hero {
@@ -243,4 +239,3 @@ pre {
   50% { transform: translateY(-6px); }
   100% { transform: translateY(0); }
 }
-
