@@ -78,19 +78,26 @@ body {
 
 /* CONTACT */
 .contact {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  text-align: right;
+
   background: transparent;
-  border: 2px solid rgba(255,255,255,0.3);
+  border: 2px solid rgba(255, 255, 255, 0.35); /* subtle outline */
   border-radius: 16px;
-  padding: 14px 22px;
+  padding: 12px 20px;
+  backdrop-filter: blur(4px); /* optional soft glass effect */
 }
+
 .contact-title {
   display: block;
-  font-size: 1.3rem;
+  font-size: 1.15rem; /* slightly smaller than before */
   font-weight: 600;
 }
 
 .contact-email {
-  font-size: 1.5rem;
+  font-size: 1.25rem; /* slightly smaller */
   font-weight: 500;
   color: var(--text);
   text-decoration: none;
