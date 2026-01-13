@@ -1,11 +1,11 @@
 :root {
-  --bg1: #0f2a44;     /* deep blue */
-  --bg2: #163a5f;     /* slightly lighter blue */
-  --accent: #7a5cff;  /* KEEP for View Projects (unchanged) */
+  --bg1: #183a5a;     /* lighter deep blue */
+  --bg2: #1f4b73;     /* softer gradient blue */
+  --accent: #7a5cff;  /* KEEP – View Projects button */
   --accent-light: #b8a9ff;
   --text: #0f172a;
   --muted: rgba(15, 23, 42, 0.65);
-  --card: #eaf2ff;    /* light blue cards / bubbles */
+  --card: #dfe9f6;    /* muted light blue (NOT white) */
 }
 * {
   box-sizing: border-box;
@@ -88,6 +88,19 @@ body {
   display: block;
   font-size: 1.3rem;
   font-weight: 600;
+  color: #ffffff;
+}
+
+
+.contact-email {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.contact-email:hover {
+  text-decoration: underline;
 }
 
 .contact-email {
@@ -114,7 +127,7 @@ body {
   background: var(--card);
   border-radius: 22px;
   padding: 16px;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.12);
 }
 
 .about-photo img {
@@ -128,7 +141,7 @@ body {
   background: var(--card);
   border-radius: 22px;
   padding: 28px 34px;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+ box-shadow: 0 10px 24px rgba(0,0,0,0.12);
 }
 
 .about-card h2 {
@@ -147,7 +160,7 @@ body {
   background: var(--card);
   padding: 26px;
   border-radius: 22px;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+ box-shadow: 0 10px 24px rgba(0,0,0,0.12);
 }
 
 /* HOVER */
@@ -157,7 +170,7 @@ body {
 
 .hover-rise:hover {
   transform: translateY(-8px);
-  box-shadow: 0 20px 45px rgba(0,0,0,0.12);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.12);
 }
 
 /* CHART */
